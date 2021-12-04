@@ -1,19 +1,19 @@
 # JimuReport - 积木报表
 
-v1.3.3-beta | 20210517
+v1.4.2 | 2021-12-06
+
 
 [![](https://img.shields.io/badge/Author-北京国炬软件-orange.svg)](http://jimureport.com)
-[![](https://img.shields.io/badge/version-1.3.3-brightgreen.svg)](https://github.com/zhangdaiscott/JimuReport)
+[![](https://img.shields.io/badge/version-1.4.2-brightgreen.svg)](https://github.com/zhangdaiscott/JimuReport)
 [![GitHub stars](https://img.shields.io/github/stars/zhangdaiscott/JimuReport.svg?style=social&label=Stars)](https://github.com/zhangdaiscott/JimuReport)
 [![GitHub forks](https://img.shields.io/github/forks/zhangdaiscott/JimuReport.svg?style=social&label=Fork)](https://github.com/zhangdaiscott/JimuReport)
 
 
- 一款免费的数据可视化工具，报表和大屏设计，像搭建积木一样在线设计报表！功能涵盖，数据报表、打印设计、图表报表、大屏设计等！
+ 一款免费的数据可视化报表，含报表和大屏设计，像搭建积木一样在线设计报表！功能涵盖，数据报表、打印设计、图表报表、大屏设计等！
 
 - Web 版报表设计器，类似于excel操作风格，通过拖拽完成报表设计。
 - 秉承“简单、易用、专业”的产品理念，极大的降低报表开发难度、缩短开发周期、节省成本、解决各类报表难题。
 - 领先的企业级Web报表软件，采用纯Web在线技术，专注于解决企业报表快速制作难题。
-- 前提：采用SpringBoot的项目可以直接集成JimuReport；非此脚手架项目你可以直接运行jimureport-samples/jimureport-demo作为独立服务来使用！
 
 ```
 专注于开源，打造“专业 易用 智能 低代码”的数据可视化工具
@@ -27,6 +27,49 @@ v1.3.3-beta | 20210517
 
 
 
+
+
+
+
+快速集成
+-----------------------------------
+- 快速集成文档
+
+    http://report.jeecg.com/2078875
+
+- 引入JimuReport依赖
+
+
+```
+<dependency>
+  <groupId>org.jeecgframework.jimureport</groupId>
+  <artifactId>jimureport-spring-boot-starter</artifactId>
+  <version>1.4.2</version>
+</dependency>
+``` 
+
+最新版本可以从 http://jimureport.com/doc/log 中查询到
+
+ 
+- 执行数据库脚本
+
+    [jimureport.sql](https://github.com/zhangdaiscott/JimuReport/blob/master/db "jimureport.sql")
+
+- 免安装运行版
+
+    [Quickstart版本](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/jimureport/jimureport-quickstart-1.4.2.zip)
+	
+
+开发文档
+-----------------------------------
+
+- 官方网站： http://www.jimureport.com
+- 官方文档： http://report.jeecg.com
+- 视频教程： http://jimureport.com/doc/video
+
+![输入图片说明](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/jimureport_qq_qun1.png "在这里输入图片标题")
+
+
 产生背景
 -----------------------------------
 报表是企业IT服务必备的一项需求，但是行业内并没有一个免费好用的报表，大部分免费的报表功能较弱也不够智能，商业报表又很贵，所以有了研发一套免费报表的初衷。
@@ -36,43 +79,6 @@ v1.3.3-beta | 20210517
 - 2019年底启动积木报表研发工作，历经一年多的时间，2020-11-03第一版出炉 [v1.0-beta](https://www.oschina.net/news/119666/jimureport-1-0-beta-released)
 - 2020年的持续打磨和研发，终于在2021-1-18发布了第一个正式版本 [v1.1.05](https://www.oschina.net/news/126916/jimureport-1-1-05-released)
 - 更多版本日志查看 [发布日志](http://jimureport.com/doc/log)
-
-
-
-快速集成
------------------------------------
-
-- 第一步：引入JimuReport依赖jar
-
-```
-<dependency>
-    <groupId>org.jeecgframework.jimureport</groupId>
-    <artifactId>spring-boot-starter-jimureport</artifactId>
-    <version>1.3.3-beta</version>
-</dependency>
-
-``` 
-
- 
-- 第二步：执行数据库脚本
-
-    [jimureport.sql](https://github.com/zhangdaiscott/JimuReport/blob/master/db "jimureport.sql")
-
-- 第三步：详细集成文档
-
-    http://report.jeecg.com/2078875
-	
-
-开发文档
------------------------------------
-
-- 操作手册： http://report.jeecg.com
-- 示例代码： https://github.com/zhangdaiscott/JimuReport
-- 官方网站： http://www.jimureport.com
-- 视频教程： http://jimureport.com/doc/video
-
-![输入图片说明](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/jimureport_qq_qun1.png "在这里输入图片标题")
-
 
 
 为什么选择 JimuReport?
@@ -93,20 +99,33 @@ v1.3.3-beta | 20210517
 
 数据库兼容 
 -----------------------------------
+ 支持含常规、国产、大数据等28种数据库
 
-|   序号  |  数据库   |  是否兼容   |  提供脚本   |
-| --- | --- | --- | --- |
-|  1   |   mysql5.7+  |  支持   |   提供|
-|  2   |   oracle11g |  支持   |    暂未提供 |
-|  3   |   sqlserver2017  |  支持   |    暂未提供 |
-|  4   |   PostgreSQL|  暂未测试   |    未提供 |
+|  数据库   |  支持   |
+| --- | --- |
+|   MySQL   |  √   |
+|  Oracle、Oracle9i   |  √   |
+|  SqlServer、SqlServer2012   |  √   |
+|   PostgreSQL   |  √   |
+|   DB2、Informix   |  √   |
+|   MariaDB   |  √   |
+|  SQLite、Hsqldb、Derby、H2   |  √   |
+|   达梦、人大金仓、神通   |  √   |
+|   华为高斯、虚谷、瀚高数据库   |  √   |
+|   阿里云PolarDB、PPAS、HerdDB   |  √   |
+|  Hive、HBase、CouchBase   |  √   |
 
-未提供脚本的数据库，可以参考 [文档](https://my.oschina.net/jeecg/blog/4905722) 自己转。
+  未提供脚本的数据库，可以参考 [文档](https://my.oschina.net/jeecg/blog/4905722) 自己转。
 
 
 
 报表截图
 -----------------------------------
+
+- 数据可视化（专业一流，数据可视化,解决各类报表难题）
+
+![](https://oscimg.oschina.net/oscnet/up-a2a8557722593e6c5a5e8f015a0df2b70e9.png)
+
 
 - 报表设计器（完全在线设计，简单易用）
 
@@ -131,6 +150,7 @@ v1.3.3-beta | 20210517
 
 功能清单
 -----------------------------------
+更多功能清单: [http://jimureport.com/plan](http://jimureport.com/plan)
 
 ```
 ├─报表设计器
