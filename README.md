@@ -1,10 +1,10 @@
-# JimuReport - 积木报表
+# JimuReport - 积木报表（一款免费Web报表工具）
 
-v1.4.2 | 2021-12-06
+v1.5.0 | 2022-05-26
 
 
 [![](https://img.shields.io/badge/Author-北京国炬软件-orange.svg)](http://jimureport.com)
-[![](https://img.shields.io/badge/version-1.4.2-brightgreen.svg)](https://github.com/zhangdaiscott/JimuReport)
+[![](https://img.shields.io/badge/version-1.5.0-brightgreen.svg)](https://github.com/zhangdaiscott/JimuReport)
 [![GitHub stars](https://img.shields.io/github/stars/zhangdaiscott/JimuReport.svg?style=social&label=Stars)](https://github.com/zhangdaiscott/JimuReport)
 [![GitHub forks](https://img.shields.io/github/forks/zhangdaiscott/JimuReport.svg?style=social&label=Fork)](https://github.com/zhangdaiscott/JimuReport)
 
@@ -39,25 +39,42 @@ v1.4.2 | 2021-12-06
 
 - 引入JimuReport依赖
 
-
 ```
 <dependency>
   <groupId>org.jeecgframework.jimureport</groupId>
   <artifactId>jimureport-spring-boot-starter</artifactId>
-  <version>1.4.2</version>
+  <version>1.5.0</version>
 </dependency>
 ``` 
 
-最新版本可以从 http://jimureport.com/doc/log 中查询到
+- 如果出现jsqlparser不兼容问题，请这么引用
 
- 
-- 执行数据库脚本
+```
+<dependency>
+    <groupId>org.jeecgframework.jimureport</groupId>
+    <artifactId>jimureport-spring-boot-starter</artifactId>
+    <version>1.5.0</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>minidao-spring-boot-starter</artifactId>
+            <groupId>org.jeecgframework</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>org.jeecgframework</groupId>
+    <artifactId>minidao-spring-boot-starter</artifactId>
+    <version>1.8.8</version>
+</dependency>
+```
 
-    [jimureport.sql](https://github.com/zhangdaiscott/JimuReport/blob/master/db "jimureport.sql")
+通过 http://jimureport.com/doc/log 查询最新版本号
 
-- 免安装运行版
 
-    [Quickstart版本](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/jimureport/jimureport-quickstart-1.4.2.zip)
+免安装版和docker版本
+-----------------------------------
+
+- http://jimureport.com/download
 	
 
 开发文档
@@ -74,11 +91,6 @@ v1.4.2 | 2021-12-06
 -----------------------------------
 报表是企业IT服务必备的一项需求，但是行业内并没有一个免费好用的报表，大部分免费的报表功能较弱也不够智能，商业报表又很贵，所以有了研发一套免费报表的初衷。
 做一个什么样的报表呢？随着低代码概念的兴起，原先通过报表工具设计模板，再与系统集成的模式已经落伍，现在追求的是完全在线设计，傻瓜式的操作，实现简单易用又智能的报表！
-
-- 目前积木报表已经实现了完全在线设计，轻量级集成、类似excel的风格，像搭建积木一样在线拖拽设计报表！功能涵盖数据报表设计、打印设计、图表设计、大屏设计等！
-- 2019年底启动积木报表研发工作，历经一年多的时间，2020-11-03第一版出炉 [v1.0-beta](https://www.oschina.net/news/119666/jimureport-1-0-beta-released)
-- 2020年的持续打磨和研发，终于在2021-1-18发布了第一个正式版本 [v1.1.05](https://www.oschina.net/news/126916/jimureport-1-1-05-released)
-- 更多版本日志查看 [发布日志](http://jimureport.com/doc/log)
 
 
 为什么选择 JimuReport?
